@@ -12,6 +12,7 @@ var file = (`${dateAndTime}${".txt"}`);
   fs.writeFile(`./files/${file}`, currentTime, function (err){
     if(err) throw err;
     console.log("file created")
+    res.sendFile(process.argv[2])
 })
 })
 
